@@ -4,4 +4,4 @@
 .project
 WebContent/META-INF/
 WebContent/WEB-INF/
-src/DB/ConnectionProvider.java
+ConnectionProvider.java
