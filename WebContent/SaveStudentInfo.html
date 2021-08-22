@@ -1,0 +1,27 @@
+<!DOCTYPE html>		
+<html lang="ko">			
+<head>
+	<!-- title 태그-->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>학생 정보 입력</title>
+</head>
+<body>
+
+	<fieldset>
+		<legend>학생 정보 입력</legend>
+		
+		<form method="post" action="register.do" accept-charset="utf-8">
+			이름 : <input type="text" name="stdName"> <br><br>
+			학번 : <input type="text" name="stdNum"> <br><br>
+			비밀번호 : <input type="password" name="pwd"> <br><br>
+			수업 명 : <input type="text" name="className"> <br><br>
+			<input type="submit" value="확인">
+			<!-- 수업 명을 학생이 입력하는 것이 아닌  선택을 할 수 있도록 수정해야겠다-->
+			<!-- 그러기 위해서는 관리자가 수업을 추가하는 페이지를 만들어야 할 것 같음-->
+		</form>
+	</fieldset>
+	
+</body>
+</html>
+
