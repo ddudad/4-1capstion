@@ -2,4 +2,5 @@
 .settings/
 .classpath
 .project
-WebContent/WEB_INF/
+WebContent/META-INF/
+WebContent/WEB-INF/
