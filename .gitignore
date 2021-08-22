@@ -4,4 +4,3 @@
 .project
 WebContent/META-INF/
 WebContent/WEB-INF/
-ConnectionProvider.java
