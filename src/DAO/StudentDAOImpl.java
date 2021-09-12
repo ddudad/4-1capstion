@@ -35,6 +35,7 @@ public class StudentDAOImpl implements StudentDAO{
 			pstmt.setString(5, dto.getStdCode());
 			
 			int x = pstmt.executeUpdate();
+			System.out.println("------------------------------" + x);
 			//executeUpdate 다음에 바로 check=true해도 될듯 어차피 오류생기면 캐치로 넘어가니까
 			if(x<1) {
 				System.out.println("x error");
@@ -68,6 +69,7 @@ public class StudentDAOImpl implements StudentDAO{
 				check=true;
 			}
 			pstmt.close();
+			check = true;
 			
 		} catch (SQLException e) {
 			System.out.println("SQL error: " + e.getLocalizedMessage());
