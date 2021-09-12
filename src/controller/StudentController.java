@@ -21,6 +21,7 @@ import sub.CreateCookieValue;
 public class StudentController extends HttpServlet{
 	
 	private StudentService studentService = new StudentServiceImpl();
+	private String redirectPage = "";
 	
 	@Override
 	protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -53,10 +54,12 @@ public class StudentController extends HttpServlet{
 				resp.addCookie(cookie);
 				out.println(cookie.getValue());
 				
-				resp.sendRedirect("register_success.html");
+				//resp.sendRedirect("register_success.html");
+				redirectPage = "register_success.html";
 			}
 			else {
-				resp.sendRedirect("register_fail");
+				//resp.sendRedirect("register_fail.html");
+				redirectPage = "register_fail.html";
 			}
 		}
 		else if(command.trim().equals("attendance")) {
@@ -93,17 +96,21 @@ public class StudentController extends HttpServlet{
 				}
 				*/
 				else {
-					resp.sendRedirect("attendance_fail.html");
+					//resp.sendRedirect("attendance_fail.html");
+					redirectPage = "attendance_fail.html";
 				}
 				
 				
 			}catch(Exception e) {
 				System.out.println(e+"¹ß»ý!!!!!!!!!!!!!!");
-				resp.sendRedirect("search_fail.html");
+				//resp.sendRedirect("search_fail.html");
+				redirectPage = "search_fail.html";
 			}	
 		}
 		else {
-			resp.sendRedirect("commandError.html");
+			//resp.sendRedirect("commandError.html");
+			redirectPage = "commandError.html";
 		}
+		resp.sendRedirect(redirectPage);
 	}
 }
